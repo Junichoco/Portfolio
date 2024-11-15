@@ -40,7 +40,7 @@ enter_button.addEventListener("click", (event) => {
       }
     } else if (question === 2){
       if(password_box.value === password2){
-        message.innerText = "You passed the test! Enjoy the forbidden section.";
+        message.innerText = "Congratulations! You have unlocked the forbidden section.";
         secret_section.classList.remove("d-none");
         passed = true;
         password_box.classList.add("d-none");
@@ -62,6 +62,7 @@ const tech_tab = document.getElementById("tech-tab");
 const favorites_tab = document.getElementById("favorites-tab");
 const projects_tab = document.getElementById("projects-tab");
 const forbidden_tab = document.getElementById("forbidden-tab");
+const click_here = document.getElementById("click-here");
 
 console.log(tab_sections[0]);
 
@@ -72,10 +73,13 @@ const closeAllTabs = () => {
   // tabs.forEach(function(tab){
   //   tab.classList.remove("active");
   // });
+  click_here.classList.add("d-none");
+
   tech_tab.classList.remove("active");
   favorites_tab.classList.remove("active");
   projects_tab.classList.remove("active");
   forbidden_tab.classList.remove("active");
+  // document.getElementsByClassName("active").classList.remove("active");
 
   document.getElementById("tech-stack").classList.add("d-none");
   document.getElementById("favorites").classList.add("d-none");
