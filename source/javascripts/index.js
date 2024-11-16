@@ -41,10 +41,13 @@ enter_button.addEventListener("click", (event) => {
     } else if (question === 2){
       if(password_box.value === password2){
         message.innerText = "Congratulations! You have unlocked the forbidden section.";
-        secret_section.classList.remove("d-none");
         passed = true;
         password_box.classList.add("d-none");
         enter_button.classList.add("d-none");
+        secret_section.classList.remove("d-none");
+        setTimeout(() => {
+          secret_section.classList.remove("tab-hidden");
+        }, 100);
       } else{
         message.innerText = "What do you put in a toaster?\nWrong answer. Try again.";
         password_box.value = "";
@@ -86,50 +89,60 @@ const closeAllTabs = () => {
   forbidden_tab.classList.remove("active");
   // document.getElementsByClassName("active").classList.remove("active");
 
-  tech_section.classList.add("d-none");
-  favorites_section.classList.add("d-none");
-  projects_section.classList.add("d-none");
-  forbidden_section.classList.add("d-none");
-
   tech_section.classList.add("tab-hidden");
   favorites_section.classList.add("tab-hidden");
   projects_section.classList.add("tab-hidden");
   forbidden_section.classList.add("tab-hidden");
+
+
+    tech_section.classList.add("d-none");
+    favorites_section.classList.add("d-none");
+    projects_section.classList.add("d-none");
+    forbidden_section.classList.add("d-none");
+
+
 }
 
 tech_tab.addEventListener("click", (event) => {
   event.preventDefault();
   closeAllTabs();
-  tech_section.classList.remove("d-none");
-  tech_section.classList.remove("tab-hidden");
-  // document.getElementById("tech-stack").classList.remove("d-none");
-
   event.currentTarget.classList.add("active");
+  tech_section.classList.remove("d-none");
 
+  setTimeout(() => {
+    tech_section.classList.remove("tab-hidden");
+  }, 100);
+  // document.getElementById("tech-stack").classList.remove("d-none");
 });
 
 favorites_tab.addEventListener("click", (event)=> {
   event.preventDefault();
   closeAllTabs();
-  favorites_section.classList.remove("d-none");
-  favorites_section.classList.remove("tab-hidden");
   event.currentTarget.classList.add("active");
+  favorites_section.classList.remove("d-none");
+  setTimeout(() => {
+    favorites_section.classList.remove("tab-hidden");
+  }, 100);
 });
 
 projects_tab.addEventListener("click", (event)=> {
   event.preventDefault();
   closeAllTabs();
-  projects_section.classList.remove("d-none");
-  projects_section.classList.remove("tab-hidden");
   event.currentTarget.classList.add("active");
+  projects_section.classList.remove("d-none");
+  setTimeout(() => {
+    projects_section.classList.remove("tab-hidden");
+  }, 100);
 });
 
 forbidden_tab.addEventListener("click", (event)=> {
   event.preventDefault();
   closeAllTabs();
-  forbidden_section.classList.remove("d-none");
-  forbidden_section.classList.remove("tab-hidden");
   event.currentTarget.classList.add("active");
+  forbidden_section.classList.remove("d-none");
+  setTimeout(() => {
+    forbidden_section.classList.remove("tab-hidden");
+  }, 100);
 });
 
 // const test_button = document.getElementById("test-button");
@@ -138,8 +151,14 @@ forbidden_tab.addEventListener("click", (event)=> {
 //   event.preventDefault();
 
 //   if(test_section.classList.contains("tab-hidden")){
-//     test_section.classList.remove("tab-hidden");
+//     setTimeout(() => {
+//       test_section.classList.remove("tab-hidden");
+//     }, 500);
+
 //   } else {
-//     test_section.classList.add("tab-hidden");
+//     setTimeout(() => {
+//       test_section.classList.add("tab-hidden");
+//     }, 500);
+
 //   }
 // });
