@@ -64,6 +64,11 @@ const projects_tab = document.getElementById("projects-tab");
 const forbidden_tab = document.getElementById("forbidden-tab");
 const click_here = document.getElementById("click-here");
 
+const tech_section = document.getElementById("tech-stack");
+const favorites_section = document.getElementById("favorites");
+const projects_section = document.getElementById("projects");
+const forbidden_section = document.getElementById("forbidden");
+
 console.log(tab_sections[0]);
 
 const closeAllTabs = () => {
@@ -81,16 +86,22 @@ const closeAllTabs = () => {
   forbidden_tab.classList.remove("active");
   // document.getElementsByClassName("active").classList.remove("active");
 
-  document.getElementById("tech-stack").classList.add("d-none");
-  document.getElementById("favorites").classList.add("d-none");
-  document.getElementById("projects").classList.add("d-none");
-  document.getElementById("forbidden").classList.add("d-none");
+  tech_section.classList.add("d-none");
+  favorites_section.classList.add("d-none");
+  projects_section.classList.add("d-none");
+  forbidden_section.classList.add("d-none");
+
+  tech_section.classList.add("tab-hidden");
+  favorites_section.classList.add("tab-hidden");
+  projects_section.classList.add("tab-hidden");
+  forbidden_section.classList.add("tab-hidden");
 }
 
 tech_tab.addEventListener("click", (event) => {
   event.preventDefault();
   closeAllTabs();
-  tab_sections[0].classList.remove("d-none");
+  tech_section.classList.remove("d-none");
+  tech_section.classList.remove("tab-hidden");
   // document.getElementById("tech-stack").classList.remove("d-none");
 
   event.currentTarget.classList.add("active");
@@ -100,20 +111,35 @@ tech_tab.addEventListener("click", (event) => {
 favorites_tab.addEventListener("click", (event)=> {
   event.preventDefault();
   closeAllTabs();
-  document.getElementById("favorites").classList.remove("d-none");
+  favorites_section.classList.remove("d-none");
+  favorites_section.classList.remove("tab-hidden");
   event.currentTarget.classList.add("active");
 });
 
 projects_tab.addEventListener("click", (event)=> {
   event.preventDefault();
   closeAllTabs();
-  document.getElementById("projects").classList.remove("d-none");
+  projects_section.classList.remove("d-none");
+  projects_section.classList.remove("tab-hidden");
   event.currentTarget.classList.add("active");
 });
 
 forbidden_tab.addEventListener("click", (event)=> {
   event.preventDefault();
   closeAllTabs();
-  document.getElementById("forbidden").classList.remove("d-none");
+  forbidden_section.classList.remove("d-none");
+  forbidden_section.classList.remove("tab-hidden");
   event.currentTarget.classList.add("active");
 });
+
+// const test_button = document.getElementById("test-button");
+// const test_section = document.getElementById("test-section");
+// test_button.addEventListener("click", (event)=> {
+//   event.preventDefault();
+
+//   if(test_section.classList.contains("tab-hidden")){
+//     test_section.classList.remove("tab-hidden");
+//   } else {
+//     test_section.classList.add("tab-hidden");
+//   }
+// });

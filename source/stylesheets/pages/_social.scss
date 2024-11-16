@@ -1,8 +1,8 @@
 .socials {
   background-color: black;
-  height: 200px;
+  height: 4rem;
   width: 100%;
-  padding: 50px;
+  // padding: 50px;
   color: white;
 
   i {
@@ -15,13 +15,16 @@
 
 .button-social {
   padding: 0px;
-  margin: 0 20px 0 20px;
+  // margin: 0 20px 0 20px;
+  width: 60px;
+  height: 4rem;
+  transition: all 0.3s;
 }
 
 .button-social:hover{
   i{
     color: skyblue;
     font-size: 35px;
-    transition: all 0.1s;
+    transition: all 0.3s;
   }
 }

@@ -40,5 +40,24 @@
 
 .tab-section{
   opacity: 1;
-  transition: all 0.5s;
+  transition: all 1s;
+  min-height: 80vh;
+}
+
+#click-here{
+  text-align: center;
+  min-height: 80vh;
+
+  i {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 4rem;
+  }
+}
+
+.tab-hidden {
+  opacity: 0;
+
+  transition: all 1s;
 }
