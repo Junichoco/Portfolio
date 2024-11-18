@@ -41,10 +41,13 @@ enter_button.addEventListener("click", (event) => {
     } else if (question === 2){
       if(password_box.value === password2){
         message.innerText = "Congratulations! You have unlocked the forbidden section.";
-        secret_section.classList.remove("d-none");
         passed = true;
         password_box.classList.add("d-none");
         enter_button.classList.add("d-none");
+        secret_section.classList.remove("d-none");
+        setTimeout(() => {
+          secret_section.classList.remove("tab-hidden");
+        }, 100);
       } else{
         message.innerText = "What do you put in a toaster?\nWrong answer. Try again.";
         password_box.value = "";
@@ -62,58 +65,89 @@ const tech_tab = document.getElementById("tech-tab");
 const favorites_tab = document.getElementById("favorites-tab");
 const projects_tab = document.getElementById("projects-tab");
 const forbidden_tab = document.getElementById("forbidden-tab");
+
 const click_here = document.getElementById("click-here");
+const tech_section = document.getElementById("tech-stack");
+const favorites_section = document.getElementById("favorites");
+const projects_section = document.getElementById("projects");
+const forbidden_section = document.getElementById("forbidden");
 
 console.log(tab_sections[0]);
 
-const closeAllTabs = () => {
-  // tab_sections.forEach(function(section){
-  //   section.classList.add("d-none");
-  // });
-  // tabs.forEach(function(tab){
-  //   tab.classList.remove("active");
-  // });
-  click_here.classList.add("d-none");
+var current_section = click_here;
+var current_tab = click_here;
 
-  tech_tab.classList.remove("active");
-  favorites_tab.classList.remove("active");
-  projects_tab.classList.remove("active");
-  forbidden_tab.classList.remove("active");
-  // document.getElementsByClassName("active").classList.remove("active");
+const switchTabs = (event) => {
+  current_tab.classList.remove("active");
+  event.currentTarget.classList.add("active");
+  current_tab = event.currentTarget;
+  console.log(current_tab);
+}
 
-  document.getElementById("tech-stack").classList.add("d-none");
-  document.getElementById("favorites").classList.add("d-none");
-  document.getElementById("projects").classList.add("d-none");
-  document.getElementById("forbidden").classList.add("d-none");
+const switchSections = (new_section) => {
+  // make current section fade out
+  current_section.classList.add("tab-hidden");
+  setTimeout(() => {
+    current_section.classList.add("d-none");
+    //display new section
+    new_section.classList.remove("d-none");
+  }, 300);
+  setTimeout(() => {
+    new_section.classList.remove("tab-hidden");
+    current_section = new_section;
+  }, 400);
 }
 
 tech_tab.addEventListener("click", (event) => {
   event.preventDefault();
-  closeAllTabs();
-  tab_sections[0].classList.remove("d-none");
-  // document.getElementById("tech-stack").classList.remove("d-none");
-
-  event.currentTarget.classList.add("active");
-
+  // switch tabs
+  if(event.currentTarget !== current_tab){
+    switchTabs(event);
+    switchSections(tech_section);
+  }
 });
 
 favorites_tab.addEventListener("click", (event)=> {
   event.preventDefault();
-  closeAllTabs();
-  document.getElementById("favorites").classList.remove("d-none");
-  event.currentTarget.classList.add("active");
+  // switch tabs
+  if(event.currentTarget !== current_tab){
+    switchTabs(event);
+    switchSections(favorites_section);
+  }
 });
 
 projects_tab.addEventListener("click", (event)=> {
   event.preventDefault();
-  closeAllTabs();
-  document.getElementById("projects").classList.remove("d-none");
-  event.currentTarget.classList.add("active");
+  // switch tabs
+  if(event.currentTarget !== current_tab){
+    switchTabs(event);
+    switchSections(projects_section);
+  }
 });
 
 forbidden_tab.addEventListener("click", (event)=> {
   event.preventDefault();
-  closeAllTabs();
-  document.getElementById("forbidden").classList.remove("d-none");
-  event.currentTarget.classList.add("active");
+  // switch tabs
+  if(event.currentTarget !== current_tab){
+    switchTabs(event);
+    switchSections(forbidden_section);
+  }
 });
+
+// const test_button = document.getElementById("test-button");
+// const test_section = document.getElementById("test-section");
+// test_button.addEventListener("click", (event)=> {
+//   event.preventDefault();
+
+//   if(test_section.classList.contains("tab-hidden")){
+//     setTimeout(() => {
+//       test_section.classList.remove("tab-hidden");
+//     }, 500);
+
+//   } else {
+//     setTimeout(() => {
+//       test_section.classList.add("tab-hidden");
+//     }, 500);
+
+//   }
+// });

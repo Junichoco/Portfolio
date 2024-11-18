@@ -54,6 +54,15 @@
   // width: 75%;
 }
 
+#vtuber-list-pictures {
+  display: flex;
+  flex-direction: column;
+
+  .project-photo {
+    // max-width: 500px;
+  }
+}
+
 .secret-form {
   // width: 200px;
   display: flex;
@@ -98,4 +107,5 @@
 
 .soundcloud {
   margin-top: 10px;
+  margin-bottom: 20px;
 }
