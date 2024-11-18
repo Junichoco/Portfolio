@@ -77,35 +77,6 @@ console.log(tab_sections[0]);
 var current_section = click_here;
 var current_tab = click_here;
 
-const closeAllTabs = () => {
-  // tab_sections.forEach(function(section){
-  //   section.classList.add("d-none");
-  // });
-  // tabs.forEach(function(tab){
-  //   tab.classList.remove("active");
-  // });
-  // current_section.classList.add("d-none");
-
-  tech_tab.classList.remove("active");
-  favorites_tab.classList.remove("active");
-  projects_tab.classList.remove("active");
-  forbidden_tab.classList.remove("active");
-  // document.getElementsByClassName("active").classList.remove("active");
-
-  // tech_section.classList.add("tab-hidden");
-  // favorites_section.classList.add("tab-hidden");
-  // projects_section.classList.add("tab-hidden");
-  // forbidden_section.classList.add("tab-hidden");
-
-
-  //   tech_section.classList.add("d-none");
-  //   favorites_section.classList.add("d-none");
-  //   projects_section.classList.add("d-none");
-  //   forbidden_section.classList.add("d-none");
-
-
-}
-
 const switchTabs = (event) => {
   current_tab.classList.remove("active");
   event.currentTarget.classList.add("active");
@@ -113,21 +84,26 @@ const switchTabs = (event) => {
   console.log(current_tab);
 }
 
+const switchSections = (new_section) => {
+  // make current section fade out
+  current_section.classList.add("tab-hidden");
+  setTimeout(() => {
+    current_section.classList.add("d-none");
+    //display new section
+    new_section.classList.remove("d-none");
+  }, 300);
+  setTimeout(() => {
+    new_section.classList.remove("tab-hidden");
+    current_section = new_section;
+  }, 400);
+}
+
 tech_tab.addEventListener("click", (event) => {
   event.preventDefault();
   // switch tabs
   if(event.currentTarget !== current_tab){
     switchTabs(event);
-
-    // make current section fade out
-    current_section.classList.add("tab-hidden");
-    setTimeout(() => {
-      current_section.classList.add("d-none");
-      //display new section
-      tech_section.classList.remove("d-none");
-      tech_section.classList.remove("tab-hidden");
-      current_section = tech_section;
-    }, 300);
+    switchSections(tech_section);
   }
 });
 
@@ -136,16 +112,7 @@ favorites_tab.addEventListener("click", (event)=> {
   // switch tabs
   if(event.currentTarget !== current_tab){
     switchTabs(event);
-
-    // make current section fade out
-    current_section.classList.add("tab-hidden");
-    setTimeout(() => {
-      current_section.classList.add("d-none");
-      //display new section
-      favorites_section.classList.remove("d-none");
-      favorites_section.classList.remove("tab-hidden");
-      current_section = favorites_section;
-    }, 300);
+    switchSections(favorites_section);
   }
 });
 
@@ -154,16 +121,7 @@ projects_tab.addEventListener("click", (event)=> {
   // switch tabs
   if(event.currentTarget !== current_tab){
     switchTabs(event);
-
-    // make current section fade out
-    current_section.classList.add("tab-hidden");
-    setTimeout(() => {
-      current_section.classList.add("d-none");
-      //display new section
-      projects_section.classList.remove("d-none");
-      projects_section.classList.remove("tab-hidden");
-      current_section = projects_section;
-    }, 300);
+    switchSections(projects_section);
   }
 });
 
@@ -172,16 +130,7 @@ forbidden_tab.addEventListener("click", (event)=> {
   // switch tabs
   if(event.currentTarget !== current_tab){
     switchTabs(event);
-
-    // make current section fade out
-    current_section.classList.add("tab-hidden");
-    setTimeout(() => {
-      current_section.classList.add("d-none");
-      //display new section
-      forbidden_section.classList.remove("d-none");
-      forbidden_section.classList.remove("tab-hidden");
-      current_section = forbidden_section;
-    }, 300);
+    switchSections(forbidden_section);
   }
 });
 

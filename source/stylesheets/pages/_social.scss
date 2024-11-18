@@ -16,9 +16,15 @@
 .button-social {
   padding: 0px;
   // margin: 0 20px 0 20px;
-  width: 60px;
+  width: 30px;
   height: 4rem;
   transition: all 0.3s;
+
+  margin: 0 10px 0 10px;
+
+  position: relative;
+  font-size: 20px;
+
   i{
     transition: all 0.3s;
   }
@@ -26,7 +32,7 @@
 
 .button-social:hover{
   i{
-    color: skyblue;
+
     font-size: 35px;
     transition: all 0.3s;
   }
