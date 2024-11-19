@@ -54,12 +54,14 @@
   // width: 75%;
 }
 
-#vtuber-list-pictures {
+.vtuber-list-pictures {
   display: flex;
   flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 
   .project-photo {
-    // max-width: 500px;
+    max-width: 800px;
   }
 }
 
