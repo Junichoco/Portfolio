@@ -1,3 +1,5 @@
+
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -18,3 +20,8 @@
 @import "pages/body";
 @import "components/tabs";
 @import "pages/forbidden";
+
+@import "../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// glide carousel
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";

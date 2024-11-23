@@ -12,41 +12,109 @@
                 <p>This project is based on the movie watchlist assignment from Le Wagon and was built using Ruby on Rails and a template from Le Wagon. I did all of the coding and design.</p>
                 <p>I made this app because I like discovering new, small VTubers, and I kept getting random VTubers recommended to me every time I opened up YouTube. At first, I kept saving their VODs to my playlists on YouTube, but after I had three playlists full of VTubers, I lost track of which ones I already added and which VTuber I put in which playlist.</p>
                 <p>So then I decided to make this app so I could keep track of the VTubers I found.</p>
-                <p>I entered all of the entries manually and picked out and cropped all of the pictures myself.</p>
+                <p>I entered all of the entries manually and picked out and cropped all of the pictures myself without the use of any APIs.</p>
+                <p>(Website coming soon)</p>
               </div>
               <div class="project-pictures">
                 <%= image_tag "vtuber_list_1.png", class: "project-photo photo-medium", id: "vtuberlist-photo-home" %>
               </div>
             </div>
-            <div id="vtuber-list-pictures">
-              <%= image_tag "vtuber_list_2.png", class: "project-photo" %>
-              <%= image_tag "vtuber_list_3.png", class: "project-photo" %>
-              <%= image_tag "vtuber_list_4.png", class: "project-photo" %>
-            </div>
-          </div>
 
+            <div class="vtuber-carousel-container">
+              <div id="vtuber-list-carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-interval="false">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="vtuber-list-picture">
+                        <%= image_tag "vtuber_list_2.png", class: "project-photo" %>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="vtuber-list-picture">
+                        <%= image_tag "vtuber_list_3.png", class: "project-photo" %>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="vtuber-list-picture">
+                        <%= image_tag "vtuber_list_4.png", class: "project-photo" %>
+                      </div>
+                    </div>
+                  </div>
 
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
 
+                </div>
+              </div>
+            </div><%# end carousel-container %>
+          </div><%# end project-card%>
 
 
 
 
           <div class="project-card">
-            <div class="project-card-top">
+            <div class="project-card-top" style="justify-content: flex-start">
               <div class="project-description">
                 <h3>Crok'</h3>
                 <p>A dog fitness management app. Make a log of your dog's body composition and exercise level, and the app will keep track of its fitness over time so you can make adjustments to its exercise and diet. Make reminders to feed your dog, take them for a walk, or take them to the vet. You can also have your family use the app and assign them tasks.</p>
+                <p>This was made with a team of four people in two weeks as part of the Le Wagon coding bootcamp.</p>
                 <% link_to "https://www.crokapp.com/home", target: :blank do %>
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="color:white;"></i>
                 <% end %>
               </div>
-              <div class="project-pictures">
-              </div>
-            </div>
-            <div class="project-card-bottom">
-              <%= image_tag "crok_1.png", class: "project-photo photo-medium" %>
-              <%= image_tag "crok_2.png", class: "project-photo photo-medium" %>
-              <%= image_tag "crok_3.png", class: "project-photo photo-medium" %>
+
+
+              <div class="crok-carousel-container">
+                <div id="crok-carousel">
+                  <div id="carouselCrokIndicators" class="carousel slide" data-bs-interval="false">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselCrokIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselCrokIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselCrokIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="crok-picture">
+                          <%= image_tag "crok_1.png", class: "project-photo photo-medium" %>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="crok-picture">
+                          <%= image_tag "crok_2.png", class: "project-photo photo-medium" %>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="crok-picture">
+                          <%= image_tag "crok_3.png", class: "project-photo photo-medium" %>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCrokIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCrokIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+
+                  </div>
+                </div>
+              </div><%# end carousel-container %>
+
+
             </div>
           </div>
 
@@ -54,7 +122,10 @@
             <div class="project-card-top">
               <div class="project-description">
                 <h3>LuxeHaven</h3>
-                <p>A marketplace web app for renting suits, cars, watches, and other luxury items. Made with a team of four people as part of the Le Wagon coding bootcamp.</p>
+                <p>An Airbnb-style marketplace web app for renting suits, cars, watches, and other luxury items. This was made with the same team as Crok'.</p>
+                <% link_to "https://luxeheaven-9096152b2aae.herokuapp.com/", target: :blank do %>
+                <i class="fa-solid fa-arrow-up-right-from-square" style="color:white;"></i>
+              <% end %>
               </div>
               <div class="project-pictures">
                 <%= image_tag 'luxehaven.png', class: 'project-photo photo-medium' %>

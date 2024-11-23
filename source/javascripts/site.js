@@ -11,3 +11,5 @@
 
 // window.Stimulus = Application.start();
 // Stimulus.register("event-listener", EventListenerController);
+
+//= require jquery
