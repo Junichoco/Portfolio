@@ -10,7 +10,7 @@
 
 .project-description {
   width: 50%;
-  margin-right: 10px;
+  margin-right: 20px;
 
   i {
     font-size: 20px;
@@ -26,6 +26,7 @@
 .project-photo {
   // max-width: 650px;
   // max-height: 500px;
+  width: 600px;
   margin: 20px;
   border: 0.5rem solid #4760ff;
   border-radius: 5px;
@@ -52,17 +53,6 @@
 
 #vtuberlist-photo-home {
   // width: 75%;
-}
-
-.vtuber-list-pictures {
-  display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-
-  .project-photo {
-    max-width: 800px;
-  }
 }
 
 .secret-form {
@@ -110,4 +100,98 @@
 .soundcloud {
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.vtuber-carousel-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#vtuber-list-carousel {
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+}
+.vtuber-list-picture {
+  height: 650px;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-height: 650px;
+    width: 900px;
+  }
+}
+// .carousel-control-next{
+//   color: black;
+// }
+// .carousel-control-next-icon {
+//   color: black;
+// }
+
+
+// .vtuber-list-pictures {
+//   display: flex;
+
+//   // justify-content: center;
+//   // align-items: center;
+
+//   .project-photo {
+//     max-width: 800px;
+//   }
+// }
+
+// #vtuber-list-pictures {
+//   position: relative;
+//   // width: 100%;
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .my-carousel {
+//   width: 100%;
+//   position: absolute;
+//   top: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+// .my-carousel-slide {
+//   position: absolute;
+//   // top: 0;
+//   left: 50%;
+
+// }
+
+
+.carousel-buttons {
+  background-color: black;
+}
+
+
+
+.crok-carousel-container {
+  width: 400px;
+  height: 570px;
+  display: flex;
+  justify-content: center;
+}
+#crok-carousel {
+  width: 260px;
+  display: flex;
+  justify-content: center;
+}
+.crok-picture {
+  width: 360px;
+  // max-width: 650px;
+  // max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-height: 500px;
+  }
 }

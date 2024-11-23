@@ -1,5 +1,7 @@
 .banner {
   // max-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .photo {
@@ -22,13 +24,14 @@
 }
 
 .landscape-photo {
-  // width: fit-content;
+  width: 100%;
   position: relative;
   text-align: center;
   height: 500px;
   overflow: hidden;
-  margin: 20px;
+  // margin: 20px;
   box-shadow: 0px 0px 20px white;
+  padding: 0;
 }
 
 .title-main {

@@ -8,6 +8,10 @@ window.Stimulus = Application.start();
 Stimulus.register("password", PasswordController);
 
 
+// import Glide from '@glidejs/glide'
+
+// new Glide('.glide').mount()
+
 const secret_section = document.getElementById("secret");
 const password_box = document.querySelector("#password-box");
 // const enter_button = document.getElementById("enter-button");
