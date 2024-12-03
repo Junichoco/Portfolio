@@ -124,47 +124,6 @@
     width: 900px;
   }
 }
-// .carousel-control-next{
-//   color: black;
-// }
-// .carousel-control-next-icon {
-//   color: black;
-// }
-
-
-// .vtuber-list-pictures {
-//   display: flex;
-
-//   // justify-content: center;
-//   // align-items: center;
-
-//   .project-photo {
-//     max-width: 800px;
-//   }
-// }
-
-// #vtuber-list-pictures {
-//   position: relative;
-//   // width: 100%;
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .my-carousel {
-//   width: 100%;
-//   position: absolute;
-//   top: 50%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-// .my-carousel-slide {
-//   position: absolute;
-//   // top: 0;
-//   left: 50%;
-
-// }
-
 
 .carousel-buttons {
   background-color: black;
@@ -195,3 +154,127 @@
     max-height: 500px;
   }
 }
+
+#footer {
+  height: 10vh;
+}
+
+
+@media (max-width: 1400px) {
+  .project-card-top {
+    flex-direction: column;
+  }
+  .project-description {
+    width: 100%;
+  }
+  .project-pictures {
+    width: 100%;
+  }
+  .crok-carousel-container {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .vtuber-list-picture {
+    width: 100%;
+    img {
+      max-height: 650px;
+      width: 700px;
+    }
+  }
+  // .vtuber-carousel-container {
+  //   width: 900px;
+  // }
+  #vtuber-list-carousel {
+    width: 90%;
+  }
+
+  .vtuber-list-picture {
+    height: 650px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 880px) {
+  .vtuber-list-picture {
+    width: 100%;
+    img {
+      max-height: 400px;
+      width: 525px;
+    }
+  }
+  .vtuber-carousel-container {
+    height: 400px;
+  }
+  // #vtuber-list-carousel {
+  //   width: 90%;
+  // }
+
+  .vtuber-list-picture {
+    height: 400px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .vtuber-list-picture {
+    width: 700px;
+    img {
+      max-height: 650px;
+      width: 80%
+    }
+  }
+  .vtuber-carousel-container {
+    width: 100%;
+   }
+  // #vtuber-list-carousel {
+  //   width: 100%;
+  // }
+
+  .vtuber-list-picture {
+    // height: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .photo-large {
+    width: 100%;
+  }
+}
+
+// @media (max-width: 430px) {
+//   #vtuberlist-photo-home {
+//     width: 80%;
+//   }
+//   .vtuber-list-picture {
+//     width: 80%;
+//     img {
+//       max-height: 650px;
+//       width: 80%;
+//     }
+//   }
+//   // .vtuber-carousel-container {
+//   //   width: 700px;
+//   // }
+//   #vtuber-list-carousel {
+//     width: 100%;
+//   }
+
+//   .vtuber-list-picture {
+//     height: 650px;
+//     width: 80%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
