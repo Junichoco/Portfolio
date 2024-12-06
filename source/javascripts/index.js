@@ -80,8 +80,10 @@ console.log(tab_sections[0]);
 
 var current_section = click_here;
 var current_tab = click_here;
+var switching = false;
 
 const switchTabs = (event) => {
+  switching = true;
   current_tab.classList.remove("active");
   event.currentTarget.classList.add("active");
   current_tab = event.currentTarget;
@@ -91,6 +93,7 @@ const switchTabs = (event) => {
 const switchSections = (new_section) => {
   // make current section fade out
   current_section.classList.add("tab-hidden");
+
   setTimeout(() => {
     current_section.classList.add("d-none");
     //display new section
@@ -99,13 +102,15 @@ const switchSections = (new_section) => {
   setTimeout(() => {
     new_section.classList.remove("tab-hidden");
     current_section = new_section;
+    switching = false;
   }, 400);
 }
 
 tech_tab.addEventListener("click", (event) => {
   event.preventDefault();
   // switch tabs
-  if(event.currentTarget !== current_tab){
+  if(event.currentTarget !== current_tab && switching === false){
+
     switchTabs(event);
     switchSections(tech_section);
   }
@@ -114,7 +119,7 @@ tech_tab.addEventListener("click", (event) => {
 favorites_tab.addEventListener("click", (event)=> {
   event.preventDefault();
   // switch tabs
-  if(event.currentTarget !== current_tab){
+  if(event.currentTarget !== current_tab && switching === false){
     switchTabs(event);
     switchSections(favorites_section);
   }
@@ -123,7 +128,7 @@ favorites_tab.addEventListener("click", (event)=> {
 projects_tab.addEventListener("click", (event)=> {
   event.preventDefault();
   // switch tabs
-  if(event.currentTarget !== current_tab){
+  if(event.currentTarget !== current_tab && switching === false){
     switchTabs(event);
     switchSections(projects_section);
   }
@@ -132,7 +137,7 @@ projects_tab.addEventListener("click", (event)=> {
 forbidden_tab.addEventListener("click", (event)=> {
   event.preventDefault();
   // switch tabs
-  if(event.currentTarget !== current_tab){
+  if(event.currentTarget !== current_tab && switching === false){
     switchTabs(event);
     switchSections(forbidden_section);
   }

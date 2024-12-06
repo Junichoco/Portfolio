@@ -42,12 +42,12 @@
   opacity: 1;
   transition: all 0.3s;
   padding-bottom: 30px;
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 #click-here{
   text-align: center;
-  min-height: 80vh;
+  height: 50vh;
 
   i {
     font-size: 4rem;
@@ -61,4 +61,16 @@
   opacity: 0;
 
   transition: all 0.3s;
+}
+
+@media (max-width: 460px) {
+  .tabs-underlined .tab-underlined {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 395px) {
+  .tabs-underlined .tab-underlined {
+    margin: 5px;
+  }
 }

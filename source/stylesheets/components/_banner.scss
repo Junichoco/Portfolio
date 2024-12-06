@@ -50,3 +50,25 @@
   // width: 90%;
   // height: 90%;
 }
+
+@media (max-width: 874px ) {
+  .caption {
+    width: 75%;
+  }
+}
+
+@media (max-width: 665px ) {
+  .photo {
+    width: 682px;
+  }
+}
+
+@media (max-width: 540px) {
+  .landscape-photo {
+    height: 300px;
+  }
+  .caption {
+    width: 80%;
+    font-size: 1.25em;
+  }
+}
