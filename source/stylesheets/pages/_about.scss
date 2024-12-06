@@ -82,6 +82,19 @@ text-align: center;
   }
 }
 
+@media (max-width: 375px) {
+  .tech-container-2 {
+    align-items: center;
+
+    p {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
 @media (max-width: 990px) {
   .favorites-list {
     p {

@@ -4,20 +4,36 @@
 }
 
 .project-card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+
   display: flex;
   justify-content: center;
   align-items: center;
   // justify-content: space-between;
+
+  // -webkit-flex-wrap: wrap;
+  // -ms-flex-wrap: wrap;
 }
 
 .project-description {
   width: 50%;
-  margin-right: 20px;
+  margin-right: 10px;
 
   i {
     font-size: 20px;
   }
 }
+
+.vtuberlist-header {
+  width: 100%;
+  margin-left: 0;
+  padding-left: 0;
+}
+// .vtuberlist-body {
+//   margin-right: 20px;
+// }
+
 .project-pictures {
   width: 50%;
   display: flex;
@@ -47,7 +63,7 @@
 #vtuberlist-photo-home {
   max-width: 100%;
 
-  margin: 20px;
+  // margin: 10px;
   border: 0.5rem solid #4760ff;
   border-radius: 5px;
   box-shadow: 0 3px 7px rgba(0,0,0,0.5);
@@ -184,6 +200,7 @@
   }
   .project-description {
     width: 100%;
+    margin-right: 0;
   }
   .project-pictures {
     width: 100%;
@@ -192,6 +209,9 @@
     width: 100%;
   }
 
+  // .container {
+  //   padding: 0;
+  // }
 }
 
 @media (max-width: 1200px) {
@@ -227,7 +247,7 @@
     }
   }
   .vtuber-carousel-container {
-    height: 400px;
+    height: 350px;
   }
   // #vtuber-list-carousel {
   //   width: 90%;
@@ -244,7 +264,6 @@
 
 @media (max-width: 700px) {
   .vtuber-list-picture {
-    width: 100%;
     img {
       max-height: 650px;
       width: 80%
@@ -268,6 +287,24 @@
 
   .photo-large {
     width: 100%;
+  }
+
+  #vtuber-list-photo-home {
+    -webkit-order: 1;
+    -ms-order: 1;
+  }
+  .vtuberlist-body {
+    -webkit-order: 2;
+    -ms-order: 2;
+  }
+}
+
+@media (max-width: 575px) {
+  .project-card-top {
+    // margin: 0 20px 0 20px;
+  }
+  .vtuberlist-header {
+    margin: 0 10px 0 10px;
   }
 }
 
