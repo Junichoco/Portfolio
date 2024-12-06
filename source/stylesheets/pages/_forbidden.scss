@@ -9,6 +9,7 @@
 .message-box {
   height: 60px;
   text-align: center;
+  margin-top: 10px;
 
   p {
     margin-bottom: 0;
@@ -35,8 +36,32 @@
   transition: all 0.5s;
 }
 
+.soundcloud {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  iframe {
+    width: 50%;
+    align-self: center;
+    margin-bottom: 5px;
+  }
+}
+
+
+
 .video-clips {
+  // display: flex;
+  // justify-content: center;
+  width: 50%;
   margin-bottom: 100px;
+  align-self: center;
+
+  iframe {
+  aspect-ratio: 16/9;
+  width: 100%;
+  // width: 50%;
+  }
 }
 
 .clip-carousel-container {
@@ -61,4 +86,20 @@
   // img {
   //   max-height: 500px;
   // }
+}
+
+// iframe {
+//   aspect-ratio: 16/9;
+//   width: 100% !important;
+// }
+
+
+
+@media (max-width: 770px) {
+  .video-clips {
+    width: 100%;
+  }
+  .soundcloud iframe {
+    width: 100%;
+  }
 }
