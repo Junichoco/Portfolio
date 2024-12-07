@@ -8,9 +8,6 @@ window.Stimulus = Application.start();
 Stimulus.register("password", PasswordController);
 
 
-// import Glide from '@glidejs/glide'
-
-// new Glide('.glide').mount()
 
 const secret_section = document.getElementById("secret");
 const password_box = document.querySelector("#password-box");
@@ -65,8 +62,6 @@ enter_button.addEventListener("click", (event) => {
     }
   }
 
-  // console.log(event);
-  // console.log(event.currentTarget);
 });
 
 const tab_sections = document.getElementsByClassName("tab-section");
