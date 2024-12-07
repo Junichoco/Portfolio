@@ -34,6 +34,11 @@ enter_button.addEventListener("click", (event) => {
         message.innerText = `Enter the password ${count} more times.\n`;
         password_box.value = "";
         count = count - 1;
+
+        if(count === 4){
+          message.classList.add("red");
+        }
+
       } else if (password_box.value === password1 && count === 0){
         question = 2;
         message.innerText = "What do you put in a toaster?\n";
@@ -44,6 +49,7 @@ enter_button.addEventListener("click", (event) => {
       }
     } else if (question === 2){
       if(password_box.value === password2){
+        message.classList.remove("red");
         message.innerText = "Congratulations! You have unlocked the forbidden section.";
         passed = true;
         password_box.classList.add("d-none");
