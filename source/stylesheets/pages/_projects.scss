@@ -239,6 +239,10 @@
 }
 
 @media (max-width: 880px) {
+  #vtuber-list-carousel {
+    height:400px;
+    width: 100%;
+  }
   .vtuber-list-picture {
     width: 100%;
     img {
@@ -274,7 +278,7 @@
    }
   #vtuber-list-carousel {
     width: 100%;
-    height: 325px;
+    height: 350px;
   }
 
   .vtuber-list-picture {
@@ -287,6 +291,13 @@
 
   .photo-large {
     width: 100%;
+  }
+
+  .vtuber-list-picture {
+    img {
+      // max-height: 650px;
+      width: 100%
+    }
   }
 
   #vtuber-list-photo-home {
@@ -310,15 +321,16 @@
 
 @media (max-width: 430px) {
   #vtuber-list-carousel {
-    height: 275px;
+    height: 300px;
   }
 
   .vtuber-list-picture {
-    height: 275px;
+    height: 300px;
   }
   .vtuber-carousel-container {
-    height: 275px;
+    height: 300px;
   }
+
 }
 
 // @media (max-width: 430px) {
