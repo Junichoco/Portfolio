@@ -71,7 +71,7 @@
                 <p>A dog fitness management app. Make a log of your dog's body composition and exercise level, and the app will keep track of its fitness over time so you can make adjustments to its exercise and diet. Make reminders to feed your dog, take them for a walk, or take them to the vet. You can also have your family use the app and assign them tasks.</p>
                 <p>This was made with a team of four people in two weeks as part of the Le Wagon coding bootcamp.</p>
                 <% link_to "https://www.crokapp.com/home", target: :blank do %>
-                  <i class="fa-solid fa-arrow-up-right-from-square" style="color:white;"></i>
+                  <i class="fa-solid fa-arrow-up-right-from-square" ></i>
                 <% end %>
               </div>
 
@@ -125,8 +125,8 @@
                 <h3>LuxeHaven</h3>
                 <p>An Airbnb-style marketplace web app for renting suits, cars, watches, and other luxury items. This was made with the same team as Crok' and was the first web app I made as part of a team. It was also the prelude to Crok' and VTuber List, being made with Ruby on Rails, PostgreSQL, and Cloudinary.</p>
                 <% link_to "https://luxeheaven-9096152b2aae.herokuapp.com/", target: :blank do %>
-                <i class="fa-solid fa-arrow-up-right-from-square" style="color:white;"></i>
-              <% end %>
+                  <i class="fa-solid fa-arrow-up-right-from-square" style="color:white;"></i>
+                <% end %>
               </div>
               <div class="project-pictures">
                 <%= image_tag 'luxehaven.png', class: 'project-photo photo-medium photo-large' %>
@@ -140,9 +140,28 @@
                 <h3>Karaoke Roulette of Doom</h3>
                 <p>A simple React project built using the React Custom Roulette package. Includes a lot of my favorite karaoke songs. Perfect for when your friends want you to suffer, or vice versa.</p>
                 <p>(Website coming soon)</p>
+                <% link_to "https://github.com/Junichoco/karaoke-roulette", target: :blank do %>
+                  <i class="fa-brands fa-github"></i>
+                <% end %>
               </div>
               <div class="project-pictures">
                 <%= image_tag 'karaoke_roulette_2.png', class: 'project-photo photo-medium photo-large' %>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-card-top" style="justify-content: flex-start">
+              <div class="project-description">
+                <h3>VTuber Feed</h3>
+                <p>A simple Django project that uses the feedparser library and django-apscheduler to automatically fetch videos and VODs from VTubers.</p>
+                <p>(Website coming soon)</p>
+                <% link_to "https://github.com/Junichoco/vtuber-feed", target: :blank do %>
+                  <i class="fa-brands fa-github"></i>
+                <% end %>
+              </div>
+              <div class="project-pictures">
+                <%= image_tag 'vtuber_feed_2.png', class: 'project-photo photo-medium photo-large' %>
               </div>
             </div>
           </div>
