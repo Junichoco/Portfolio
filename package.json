@@ -2,6 +2,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.7.0",
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "cors-anywhere": "^0.4.4"
   }
 }
