@@ -1,4 +1,4 @@
-console.log("monkey");
+// console.log("monkey");
 
 import { Application } from "@hotwired/stimulus";
 
@@ -39,7 +39,7 @@ var passed = false;
 
 enter_button.addEventListener("click", (event) => {
   event.preventDefault();
-  console.log(password_box.value);
+  // console.log(password_box.value);
 
   if(!passed){
     if(question === 1){
@@ -93,7 +93,7 @@ const favorites_section = document.getElementById("favorites");
 const projects_section = document.getElementById("projects");
 const forbidden_section = document.getElementById("forbidden");
 
-console.log(tab_sections[0]);
+// console.log(tab_sections[0]);
 
 var current_section = click_here;
 var current_tab = click_here;
@@ -104,7 +104,7 @@ const switchTabs = (event) => {
   current_tab.classList.remove("active");
   event.currentTarget.classList.add("active");
   current_tab = event.currentTarget;
-  console.log(current_tab);
+  // console.log(current_tab);
 }
 
 const switchSections = (new_section) => {
