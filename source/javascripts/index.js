@@ -1,11 +1,11 @@
 // console.log("monkey");
 
-import { Application } from "@hotwired/stimulus";
+// import { Application } from "@hotwired/stimulus";
 
-import PasswordController from "./controllers/password_controller.js";
+// import PasswordController from "./controllers/password_controller.js";
 
-window.Stimulus = Application.start();
-Stimulus.register("password", PasswordController);
+// window.Stimulus = Application.start();
+// Stimulus.register("password", PasswordController);
 
 
 (function() {
