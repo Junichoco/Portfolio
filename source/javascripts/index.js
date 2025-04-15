@@ -44,7 +44,7 @@ enter_button.addEventListener("click", (event) => {
   if(!passed){
     if(question === 1){
       if(password_box.value === password1 && count >= 1){
-        message.innerText = `Enter the password ${count} more times.\n`;
+        message.innerText = `あと${count}回入力してください。\n`;
         password_box.value = "";
         count = count - 1;
 
@@ -54,16 +54,16 @@ enter_button.addEventListener("click", (event) => {
 
       } else if (password_box.value === password1 && count === 0){
         question = 2;
-        message.innerText = "What do you put in a toaster?\n";
+        message.innerText = "トースターに何を入れる？\n";
         password_box.value = "";
       } else {
-        message.innerText = `Wrong password`;
+        message.innerText = `パスワードが間違っています`;
         password_box.value = "";
       }
     } else if (question === 2){
       if(password_box.value === password2){
         message.classList.remove("red");
-        message.innerText = "Congratulations! You have unlocked the forbidden section.";
+        message.innerText = "おめでとう！禁忌部分を解錠しました。";
         passed = true;
         password_box.classList.add("d-none");
         enter_button.classList.add("d-none");
@@ -72,7 +72,7 @@ enter_button.addEventListener("click", (event) => {
           secret_section.classList.remove("tab-hidden");
         }, 100);
       } else{
-        message.innerText = "What do you put in a toaster?\nWrong answer. Try again.";
+        message.innerText = "トースターに何を入れる？\n応答は間違っています。もう一度入力してください。";
         password_box.value = "";
       }
     }
