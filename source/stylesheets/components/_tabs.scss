@@ -69,6 +69,12 @@
   }
 }
 
+@media (max-width: 495px) {
+  .tab-underlined {
+    font-size: 0.85em;
+  }
+}
+
 @media (max-width: 395px) {
   .tabs-underlined .tab-underlined {
     margin: 5px;

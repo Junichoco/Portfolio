@@ -109,3 +109,9 @@
     padding: 0 10px 0 10px;
   }
 }
+
+@media (max-width: 427px) {
+  .message-box{
+    height: 80px;
+  }
+}

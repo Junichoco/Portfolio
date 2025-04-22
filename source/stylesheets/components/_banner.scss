@@ -47,9 +47,15 @@
   transition: all 0.5s;
 }
 
+@media (max-width: 979px ) {
+  .caption {
+    width: 75%
+  }
+}
+
 @media (max-width: 874px ) {
   .caption {
-    width: 75%;
+    // width: 75%;
   }
 }
 
@@ -59,12 +65,18 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 654px) {
+  .caption {
+    width: 90%;
+  }
+}
+
+@media (max-width: 544px) {
   .landscape-photo {
     height: 300px;
   }
   .caption {
-    width: 80%;
+    width: 90%;
     font-size: 1.25em;
   }
 }

@@ -19,6 +19,11 @@ text-align: center;
   align-self: center;
 }
 
+.section-subheader {
+  display: flex;
+  justify-content: center;
+}
+
 .favorites-list {
   width: 910px;
   display: flex;
@@ -97,6 +102,9 @@ text-align: center;
 @media (max-width: 540px) {
   .favorites-section {
     width: 250px;
+  }
+  .section-subheader {
+    flex-direction: column;
   }
 }
 
