@@ -116,6 +116,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  i18n
   jquery-middleman
   middleman (~> 4.2)
   middleman-autoprefixer (~> 3.0)
