@@ -105,21 +105,3 @@ forbidden_tab.addEventListener("click", (event)=> {
     switchSections(forbidden_section);
   }
 });
-
-// const test_button = document.getElementById("test-button");
-// const test_section = document.getElementById("test-section");
-// test_button.addEventListener("click", (event)=> {
-//   event.preventDefault();
-
-//   if(test_section.classList.contains("tab-hidden")){
-//     setTimeout(() => {
-//       test_section.classList.remove("tab-hidden");
-//     }, 500);
-
-//   } else {
-//     setTimeout(() => {
-//       test_section.classList.add("tab-hidden");
-//     }, 500);
-
-//   }
-// });
