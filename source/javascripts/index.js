@@ -25,60 +25,6 @@
   };
 })();
 
-const secret_section = document.getElementById("secret");
-const password_box = document.querySelector("#password-box");
-// const enter_button = document.getElementById("enter-button");
-const enter_button = document.querySelector("#forbidden-button");
-const message = document.querySelector("#message");
-
-const password1 = "roast";
-const password2 = "bread";
-var question = 1;
-var count = 10;
-var passed = false;
-
-enter_button.addEventListener("click", (event) => {
-  event.preventDefault();
-  // console.log(password_box.value);
-
-  if(!passed){
-    if(question === 1){
-      if(password_box.value === password1 && count >= 1){
-        message.innerText = `あと${count}回入力してください。\n`;
-        password_box.value = "";
-        count = count - 1;
-
-        if(count === 4){
-          message.classList.add("red");
-        }
-
-      } else if (password_box.value === password1 && count === 0){
-        question = 2;
-        message.innerText = "トースターに何を入れる？\n";
-        password_box.value = "";
-      } else {
-        message.innerText = `パスワードが間違っています`;
-        password_box.value = "";
-      }
-    } else if (question === 2){
-      if(password_box.value === password2){
-        message.classList.remove("red");
-        message.innerText = "おめでとう！禁忌部分を解錠しました。";
-        passed = true;
-        password_box.classList.add("d-none");
-        enter_button.classList.add("d-none");
-        secret_section.classList.remove("d-none");
-        setTimeout(() => {
-          secret_section.classList.remove("tab-hidden");
-        }, 100);
-      } else{
-        message.innerText = "トースターに何を入れる？\n応答は間違っています。もう一度入力してください。";
-        password_box.value = "";
-      }
-    }
-  }
-
-});
 
 const tab_sections = document.getElementsByClassName("tab-section");
 const tabs = document.getElementsByClassName("tab-underlined");
