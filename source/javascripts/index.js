@@ -27,7 +27,6 @@
 
 // const en_tab = document.getElementById("english-tab");
 // const jp_tab = document.getElementById("japanese-tab");
-
 // const en_divs = document.getElementsByClassName("english");
 // const jp_divs = document.getElementsByClassName("japanese");
 // var japanese = false;
