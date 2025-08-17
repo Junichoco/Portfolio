@@ -25,30 +25,30 @@
   };
 })();
 
-const en_tab = document.getElementById("english-tab");
-const jp_tab = document.getElementById("japanese-tab");
+// const en_tab = document.getElementById("english-tab");
+// const jp_tab = document.getElementById("japanese-tab");
 
-const en_divs = document.getElementsByClassName("english");
-const jp_divs = document.getElementsByClassName("japanese");
-var japanese = false;
+// const en_divs = document.getElementsByClassName("english");
+// const jp_divs = document.getElementsByClassName("japanese");
+// var japanese = false;
 
-en_tab.addEventListener("click", (event) => {
-  if(japanese){
-    jp_divs[0].classList.add("d-none");
-    en_divs[0].classList.remove("d-none");
-    japanese = false;
-    console.log("english");
-  }
-})
+// en_tab.addEventListener("click", (event) => {
+//   if(japanese){
+//     jp_divs[0].classList.add("d-none");
+//     en_divs[0].classList.remove("d-none");
+//     japanese = false;
+//     console.log("english");
+//   }
+// })
 
-jp_tab.addEventListener("click", (event) => {
-  if(!japanese){
-    en_divs[0].classList.add("d-none");
-    jp_divs[0].classList.remove("d-none");
-    japanese = true;
-    console.log("japanese");
-  }
-})
+// jp_tab.addEventListener("click", (event) => {
+//   if(!japanese){
+//     en_divs[0].classList.add("d-none");
+//     jp_divs[0].classList.remove("d-none");
+//     japanese = true;
+//     console.log("japanese");
+//   }
+// })
 
 
 const tab_sections = document.getElementsByClassName("tab-section");
