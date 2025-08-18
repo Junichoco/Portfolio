@@ -25,29 +25,51 @@
   };
 })();
 
-// const en_tab = document.getElementById("english-tab");
-// const jp_tab = document.getElementById("japanese-tab");
-// const en_divs = document.getElementsByClassName("english");
-// const jp_divs = document.getElementsByClassName("japanese");
-// var japanese = false;
+const en_tab = document.getElementById("english-tab");
+const jp_tab = document.getElementById("japanese-tab");
+const en_divs = document.getElementsByClassName("english");
+const jp_divs = document.getElementsByClassName("japanese");
+var japanese = false;
 
-// en_tab.addEventListener("click", (event) => {
-//   if(japanese){
-//     jp_divs[0].classList.add("d-none");
-//     en_divs[0].classList.remove("d-none");
-//     japanese = false;
-//     console.log("english");
-//   }
-// })
+//switch to English
+en_tab.addEventListener("click", (event) => {
+  if(japanese){
+    //hide Japanese
+    var i;
+    for(i = 0; i < jp_divs.length; i++){
+      jp_divs[i].classList.add("d-none");
+    }
 
-// jp_tab.addEventListener("click", (event) => {
-//   if(!japanese){
-//     en_divs[0].classList.add("d-none");
-//     jp_divs[0].classList.remove("d-none");
-//     japanese = true;
-//     console.log("japanese");
-//   }
-// })
+    //display English
+    var j;
+    for(j = 0; j < en_divs.length; j++){
+      en_divs[j].classList.remove("d-none");
+    }
+
+    japanese = false;
+    console.log("english");
+  }
+})
+
+//switch to Japanese
+jp_tab.addEventListener("click", (event) => {
+  if(!japanese){
+    //hide English
+    var i;
+    for(i = 0; i < en_divs.length; i++){
+      en_divs[i].classList.add("d-none");
+    }
+
+    //display Japanese
+    var j;
+    for(j = 0; j < jp_divs.length; j++){
+      jp_divs[j].classList.remove("d-none");
+    }
+
+    japanese = true;
+    console.log("japanese");
+  }
+})
 
 
 const tab_sections = document.getElementsByClassName("tab-section");
