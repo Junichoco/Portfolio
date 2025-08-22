@@ -2,12 +2,6 @@
 text-align: center;
 }
 
-.language-tabs{
-  color: white;
-  text-align: center;
-  margin-bottom: 1em;
-}
-
 .favorites-container {
 
   display: flex;
@@ -88,6 +82,12 @@ text-align: center;
   border-image-source: linear-gradient(to left, #05008C, #85D8FF);
 }
 
+.section-subheader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 770px) {
   .favorites-section {
     // width: 100%;
@@ -103,6 +103,12 @@ text-align: center;
 @media (max-width: 540px) {
   .favorites-section {
     width: 250px;
+  }
+}
+
+@media (max-width: 499px) {
+  .section-subheader{
+    flex-direction: column;
   }
 }
 
