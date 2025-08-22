@@ -12,6 +12,30 @@
   justify-content: center;
 }
 
+.language-tab{
+  color: white;
+  text-align: center;
+  margin: 8px;
+  padding: 8px;
+
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+
+  text-shadow: none;
+
+  transition: all 0.5s;
+}
+.language-tab.active{
+  text-shadow: white 0 0 20px;
+  transition: all 0.5s;
+}
+.language-tab:hover{
+  // font-weight: bold;
+  text-shadow: white 0 0 20px;
+  transition: all 0.5s;
+}
+
 .tabs-underlined .tab-underlined {
   color: white;
   padding: 8px;

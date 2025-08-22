@@ -46,8 +46,10 @@ en_tab.addEventListener("click", (event) => {
       en_divs[j].classList.remove("d-none");
     }
 
+    jp_tab.classList.remove("active");
+    event.currentTarget.classList.add("active");
+
     japanese = false;
-    console.log("english");
   }
 })
 
@@ -66,8 +68,10 @@ jp_tab.addEventListener("click", (event) => {
       jp_divs[j].classList.remove("d-none");
     }
 
+    en_tab.classList.remove("active");
+    event.currentTarget.classList.add("active");
+
     japanese = true;
-    console.log("japanese");
   }
 })
 
